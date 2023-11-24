@@ -1,0 +1,524 @@
+:root {
+  --main: #0077b6;
+  --text: #2e2e2e;
+  --heading: #0f0e0e;
+  --white: #ffffff;
+  --body: #0f0e0e;
+  --red: #fc3531;
+  --bord: #e6e4e4;
+}
+
+* {
+  box-sizing: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+  color: var(--heading);
+}
+
+div,
+section {
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.btn {
+  padding: 8px 16px;
+  display: inline-block;
+}
+
+.container {
+  max-width: 1140px;
+  padding-inline: 15px;
+  margin-inline: auto;
+}
+
+/* HEADER */
+.header {
+  padding-block: 15px;
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+}
+
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+.nav-link {
+  font-weight: 500;
+  transition: 300ms;
+}
+.nav-link:hover {
+  color: var(--main);
+}
+
+.header-btn {
+  background-color: var(--body);
+  color: var(--white);
+  transition: 300ms;
+  cursor: pointer;
+  border: none;
+}
+.header-btn:hover {
+  background-color: var(--red);
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 100px 50px;
+  /* margin-bottom: 40px; */
+}
+.hero-contents {
+  width: 40%;
+}
+.hero-title {
+  font-size: 6rem;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.retro-title {
+  color: var(--main);
+}
+
+.hero-texts {
+  padding-block: 40px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.hero-btn-black {
+  background-color: var(--body);
+  border: none;
+  color: var(--white);
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.hero-btn-white {
+  background-color: transparent;
+  border: 1px solid var(--red);
+  color: var(--red);
+  display: inline-block;
+}
+
+.hero-img {
+  width: 50%;
+}
+.hero-img img {
+  transform: scale(1.4) translateX(-70px) rotate(-20deg);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: linear-gradient(
+    360deg,
+    rgba(1, 77, 117, 1) 0%,
+    rgba(0, 119, 182, 1) 35%,
+    rgba(29, 86, 205, 1) 65%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  width: 50%;
+  height: 100vh;
+  z-index: -1;
+}
+
+/*  */
+
+.arrival {
+  margin-block: 120px;
+  border-top: 1px solid var(--bord);
+}
+.arrival-title {
+  padding-block: 100px;
+  font-size: 4rem;
+  text-align: center;
+}
+.arrival-contents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 40px;
+}
+.shoe-card {
+  width: calc(100% / 3 - 30px);
+}
+.img-cover {
+  width: 100%;
+  height: 250px;
+  background: #f4f4f3;
+  overflow: hidden;
+}
+
+.shoe-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* transition: 300ms; */
+  transform: translateX(-30px) rotate(-20deg);
+}
+
+.shoe-details {
+  padding-block: 20px;
+}
+.shoe-type {
+  font-size: 1.5rem;
+}
+.rating {
+}
+.price {
+  font-size: 1.4rem;
+  padding-top: 10px;
+  font-weight: 600;
+  color: var(--main);
+}
+
+.cart {
+  background-color: transparent;
+  border: 1px solid var(--text);
+  color: var(--text);
+  margin-block: 10px;
+  display: inline-block;
+  padding: 10px;
+  font-weight: 500;
+}
+
+/* OFFERS SECTION */
+.offers {
+  padding-block: 80px;
+  border-top: 2px solid #e6e4e4;
+}
+
+.offers-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 50px 0;
+}
+.offers-contents {
+  width: calc(100% / 2 - 40px);
+}
+.offers-title {
+  font-size: 3.2rem;
+  line-height: 1.4;
+  padding-bottom: 20px;
+}
+.big-offer {
+  font-size: 4rem;
+  color: var(--main);
+}
+.offers-texts {
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.offers-btn {
+  margin-block: 30px 0;
+  border: 1px double var(--text);
+}
+.offers-img {
+  width: calc(100% / 2 - 40px);
+}
+.offer-png {
+  border-radius: 20px;
+}
+
+/* REVIEWS SECTIONS */
+.reveiws {
+  padding-block: 80px 20;
+  border-top: 2px solid #e6e4e4;
+}
+.review-heading {
+  padding-block: 100px 15px;
+  font-size: 3.8rem;
+  text-align: center;
+}
+.review-head-texts {
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 100;
+  line-height: 1.1;
+}
+.reviews-flex {
+  padding-block: 60px;
+  display: flex;
+  /* align-items: center; */
+  text-align: center;
+  justify-content: space-between;
+}
+.review-card {
+  width: calc(100% / 3 - 50px);
+}
+.review-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.testimonial-head {
+  padding-block: 30px 10px;
+  font-size: 1.8rem;
+}
+
+.yellow-star {
+  width: 25px;
+  height: auto;
+  color: #eab308;
+}
+
+.small-texts {
+  font-size: 1rem;
+}
+/* CONTACT SECTION */
+.contact {
+  padding-block: 80px 20px;
+  border-top: 2px solid #e6e4e4;
+}
+.contact-flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.contact-row {
+  width: calc(100% / 3);
+}
+.contact-row-2 {
+  width: 60%;
+  display: flex;
+}
+.contact-row-1 {
+  width: 33%;
+  padding-right: 50px;
+}
+.contact-texts {
+}
+.contact-head {
+  font-size: 1.3rem;
+  padding-bottom: 20px;
+}
+.contact-ul {
+  list-style: none;
+}
+.contact-list {
+  line-height: 2.2;
+  font-size: 0.9rem;
+}
+.contact-list:hover {
+  color: var(--bord);
+}
+
+/* MRESPONSIVENESS */
+@media screen and (max-width: 991px) {
+  .container {
+    padding-inline: 30px;
+  }
+  /* header */
+  .header {
+    padding-block: 3px;
+  }
+  .nav-links {
+    display: none;
+  }
+  /* hero */
+  .hero {
+    height: auto;
+    overflow: visible;
+  }
+
+  .hero::after {
+    display: none;
+  }
+  .hero-fluid {
+    display: block;
+  }
+  .hero-contents {
+    width: 70%;
+  }
+  .hero-img {
+    width: 100%;
+  }
+  .hero-img {
+    background: linear-gradient(
+      360deg,
+      rgba(1, 77, 117, 1) 0%,
+      rgba(0, 119, 182, 1) 35%,
+      rgba(29, 86, 205, 1) 65%,
+      rgba(0, 212, 255, 1) 100%
+    );
+    margin-top: 40px;
+  }
+  .hero-img img {
+    transform: scale(1.2) translate(-30px, -60px) rotate(-20deg);
+  }
+  .hero-title {
+    font-size: 6rem;
+  }
+  .hero-texts {
+    line-height: 2;
+  }
+
+  /* ARRIVAL SECTION */
+
+  .arrival-contents {
+    justify-content: space-between;
+  }
+  .shoe-card {
+    width: calc(100% / 2 - 50px);
+  }
+
+  /* offer section */
+  .offers-fluid {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+  .offers-contents,
+  .offers-img {
+    width: 100%;
+  }
+  .jordan-svg {
+    display: none;
+  }
+  /* review section */
+  .reviews-flex {
+    flex-direction: column;
+    row-gap: 50px;
+  }
+  .review-head-texts {
+    font-size: 1.5rem;
+    width: 80%;
+    margin-inline: auto;
+  }
+  .review-head-texts br {
+    display: none;
+  }
+  .review-card {
+    width: 60%;
+    margin-inline: auto;
+  }
+
+  /* CONTACT US SECTION */
+  .contact {
+    padding-block: 40px 20px;
+  }
+  .contact-flex {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .contact-row-2 {
+    width: 100%;
+  }
+  .contact-row-1 {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* hero section */
+  .hero-img {
+    height: 300px;
+    margin-top: 120px;
+  }
+  .hero-img img {
+    transform: scale(1.3) translate(-20px, -5px) rotate(-20deg);
+  }
+
+  .hero-fluid {
+    padding-bottom: 30px;
+  }
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  .hero-contents {
+    width: 100%;
+    margin-top: 60px;
+  }
+
+  /* ARRIVAL SECTION */
+  .arrival {
+    margin-block: 50px;
+  }
+
+  .arrival-contents {
+    display: flex;
+    flex-direction: column;
+  }
+  .shoe-card {
+    width: 100%;
+    padding-inline: 30px;
+    box-sizing: border-box;
+  }
+
+  /* OFFERS SECTION */
+  .offers-title,
+  .review-heading {
+    font-size: 2.5rem;
+  }
+  .big-offer {
+    font-size: 2.8rem;
+  }
+
+  /* reviews section */
+
+  .review-card {
+    width: 100%;
+  }
+  .review-head-texts {
+    font-size: 1rem;
+  }
+  /* contact section */
+  .contact-head {
+    font-size: 0.7rem;
+  }
+
+  .contact-list {
+    line-height: 2;
+    font-size: 0.5rem;
+  }
+}
